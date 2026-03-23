@@ -56,14 +56,12 @@ a {
 
   .video-wrapper {
   width: 100%;
-  height: 55vh; /* 🔥 HIER einsetzen */
 }
 
-  video {
+video {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* 🔥 zeigt ganzes Video */
-  background: white; /* optional sauberer Look */
+  height: auto; /* 🔥 entscheidend */
+  object-fit: contain;
 }
   
   .controls {
