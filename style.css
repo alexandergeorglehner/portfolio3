@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: white;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Video */
+.video-wrapper {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.controls div {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
