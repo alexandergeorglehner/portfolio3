@@ -4,7 +4,7 @@ body {
   background: white;
 }
 
-/* Layout */
+/* DESKTOP */
 .container {
   max-width: 1200px;
   margin: 60px auto;
@@ -14,6 +14,8 @@ body {
 /* Video */
 .video-wrapper {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 video {
@@ -37,4 +39,27 @@ video {
 a {
   text-decoration: none;
   color: black;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+  .container {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  .controls {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
 }
