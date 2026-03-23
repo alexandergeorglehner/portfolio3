@@ -70,3 +70,25 @@ video {
   }
 
 }
+
+/* CONTACT PAGE */
+
+.contact-page {
+  height: 100vh;
+  position: relative;
+}
+
+/* zentrierte Email */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* unten rechts (wie Startseite) */
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
