@@ -44,22 +44,19 @@ a {
 /* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
 
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 🔥 vertikal zentrieren */
-    min-height: 100vh;
-  }
-
   .container {
     margin: 0;
     padding: 0;
-    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .video-wrapper {
     width: 100%;
-    height: 60vh; /* etwas kleiner für Balance */
+    height: 60vh;
   }
 
   video {
@@ -72,7 +69,5 @@ a {
     padding: 12px 16px;
     font-size: 14px;
   }
-
-}
 
 }
