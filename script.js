@@ -1,17 +1,16 @@
 const video = document.getElementById("video");
-const button = document.getElementById("play-toggle");
+const button = document.getElementById("sound-toggle");
 
-let isPlaying = false;
+let isMuted = true;
 
 button.onclick = function() {
-  if (!isPlaying) {
-    video.play();
+  if (isMuted) {
     video.muted = false;
-    button.innerText = "Pause";
-    isPlaying = true;
+    button.innerText = "Sound Off";
+    isMuted = false;
   } else {
-    video.pause();
-    button.innerText = "Play";
-    isPlaying = false;
+    video.muted = true;
+    button.innerText = "Sound On";
+    isMuted = true;
   }
 };
