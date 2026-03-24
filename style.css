@@ -14,8 +14,9 @@ body {
 
 /* VIDEO */
 .video-wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 80px);   
+  height: calc(100vh - 80px);  
+  margin: 40px auto;       
 }
 
 video {
@@ -34,7 +35,7 @@ a {
 /* 🔥 NAME (oben rechts) */
 .top-right-name {
   position: fixed;
-  top: 20px;
+  top: 40px;
   right: 20px;
   font-size: 14px;
 }
