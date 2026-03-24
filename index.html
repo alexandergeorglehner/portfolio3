@@ -17,16 +17,18 @@
   <div class="container">
 
     <div class="video-wrapper">
-      <video 
-        id="video"
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        preload="auto"
-      >
-        <source src="https://pub-937a650f4cd8407f8552c4d7813dff07.r2.dev/video-desktop.mp4" type="video/mp4">
-      </video>
+      <video autoplay muted loop playsinline preload="auto">
+  <source 
+    src="https://pub-937a650f4cd8407f8552c4d7813dff07.r2.dev/video-desktop.mp4" 
+    media="(min-width: 769px)" 
+    type="video/mp4"
+  >
+  <source 
+    src="https://pub-937a650f4cd8407f8552c4d7813dff07.r2.dev/video-mobile.mp4" 
+    media="(max-width: 768px)" 
+    type="video/mp4"
+  >
+</video>
     </div>
 
     <div id="sound-toggle" class="bottom-left">Sound On</div>
