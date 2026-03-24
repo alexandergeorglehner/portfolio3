@@ -15,15 +15,14 @@ body {
 
 /* Video */
 .video-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
 }
 
 video {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* 🔥 cinematic */
 }
 
 /* Controls */
