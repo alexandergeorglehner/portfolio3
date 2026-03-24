@@ -35,7 +35,7 @@ a {
 /* 🔥 NAME (oben rechts) */
 .top-right-name {
   position: fixed;
-  top: 24px; /* etwas mehr Abstand */
+  top: 20px; /* etwas mehr Abstand */
   right: 20px;
   font-size: 14px;
 }
