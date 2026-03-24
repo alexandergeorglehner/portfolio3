@@ -35,12 +35,12 @@ a {
 /* 🔥 NAME (oben rechts) */
 .top-right-name {
   position: fixed;
-  top: 20px;
+  top: 40px; /* etwas mehr Abstand */
   right: 20px;
   font-size: 14px;
 }
 
-/* 🔥 INDEX BUTTONS */
+/* 🔥 BUTTONS (GLOBAL – für ALLE Seiten gleich) */
 .bottom-left {
   position: fixed;
   bottom: 20px;
@@ -55,31 +55,6 @@ a {
   right: 20px;
   font-size: 14px;
   cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .container {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .video-wrapper {
-    width: 100%;
-    height: auto;
-  }
-
-  video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
 }
 
 /* CONTACT PAGE */
@@ -100,9 +75,37 @@ a {
   text-decoration: none;
 }
 
-/* 🔥 NUR CONTACT überschreibt Position */
-.contact-page .bottom-right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .container {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .video-wrapper {
+    width: calc(100vw - 40px);   /* etwas kleinerer Rand mobile */
+    height: auto;
+    margin: 20px auto;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .top-right-name {
+    top: 30px; /* mobile spacing */
+  }
+
+  .bottom-left,
+  .bottom-right {
+    bottom: 30px; /* besser für iOS UI */
+  }
 }
