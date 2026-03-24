@@ -41,11 +41,11 @@ a {
   color: black;
 }
 
-.top-right-name {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  position: relative; /* 🔥 DAS ist der Fix */
 }
 
 /* MOBILE OPTIMIZATION */
