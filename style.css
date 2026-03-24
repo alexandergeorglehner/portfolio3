@@ -41,6 +41,13 @@ a {
   color: black;
 }
 
+.top-right-name {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+}
+
 /* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
 
