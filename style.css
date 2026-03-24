@@ -92,3 +92,23 @@ video {
   bottom: 20px;
   right: 20px;
 }
+
+/* CONTACT PAGE */
+
+.contact-page {
+  height: 100vh;
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
