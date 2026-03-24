@@ -3,7 +3,7 @@ const button = document.getElementById("sound-toggle");
 
 let isMuted = true;
 
-// 🔥 Autoplay Fix für Mobile (iOS etc.)
+// 🔥 Mobile Autoplay Fix
 window.addEventListener("load", () => {
   video.muted = true;
   video.play().catch(() => {});
