@@ -3,7 +3,7 @@ const button = document.getElementById("sound-toggle");
 
 let isMuted = true;
 
-// 🔥 iOS Autoplay Fix
+// 🔥 iOS Autoplay Fix (unverändert)
 function forcePlay() {
   if (!video) return;
 
@@ -18,21 +18,32 @@ function forcePlay() {
 // beim Laden
 window.addEventListener("load", forcePlay);
 
-// beim ersten Touch (iOS Hack)
+// beim ersten Touch (iOS Hack – bleibt!)
 document.addEventListener("touchstart", forcePlay, { once: true });
 
-// 🔊 Sound Toggle (nur wenn Button existiert)
-if (button && video) {
-  button.onclick = function() {
-    if (isMuted) {
-      video.muted = false;
-      video.play();
-      button.innerText = "Sound Off";
-      isMuted = false;
-    } else {
-      video.muted = true;
-      button.innerText = "Sound On";
-      isMuted = true;
-    }
-  };
+// 🔊 Sound Toggle Funktion (sauber ausgelagert)
+function toggleSound() {
+  if (!video || !button) return;
+
+  if (isMuted) {
+    video.muted = false;
+    video.play(); // wichtig für iOS
+    button.innerText = "Sound Off";
+    isMuted = false;
+  } else {
+    video.muted = true;
+    button.innerText = "Sound On";
+    isMuted = true;
+  }
+}
+
+// 👉 Desktop
+if (button) {
+  button.addEventListener("click", toggleSound);
+
+  // 👉 Mobile (iOS Fix)
+  button.addEventListener("touchend", function(e) {
+    e.preventDefault(); // verhindert Doppel-Trigger
+    toggleSound();
+  });
 }
