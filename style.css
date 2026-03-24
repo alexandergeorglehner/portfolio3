@@ -9,12 +9,13 @@ body {
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;
+  position: relative; /* wichtig für Name */
 }
 
 /* Video */
 .video-wrapper {
   width: 100%;
-  max-width: 1200px; /* oder komplett entfernen */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -41,14 +42,15 @@ a {
   color: black;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
-  position: relative; /* 🔥 DAS ist der Fix */
+/* 🔥 NAME (oben rechts) */
+.top-right-name {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 14px;
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .container {
@@ -62,15 +64,15 @@ a {
   }
 
   .video-wrapper {
-  width: 100%;
-}
+    width: 100%;
+  }
 
-video {
-  width: 100%;
-  height: auto; /* 🔥 entscheidend */
-  object-fit: contain;
-}
-  
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   .controls {
     padding: 12px 16px;
     font-size: 14px;
@@ -79,29 +81,6 @@ video {
 }
 
 /* CONTACT PAGE */
-
-.contact-page {
-  height: 100vh;
-  position: relative;
-}
-
-/* zentrierte Email */
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* unten rechts (wie Startseite) */
-.bottom-right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-/* CONTACT PAGE */
-
 .contact-page {
   height: 100vh;
   position: relative;
